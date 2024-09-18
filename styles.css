@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo img {
+    width: 150px;
+    height: 50px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbar ul li {
+   display: flex;
+   gap: 35px;
+    position: relative;
+    padding: 10px 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    padding: 15px 15px;
+    height: 0;
+    top: -15px;
+    margin: auto;
+    bottom: -15px;
+    left: -15px;
+    background-color: #999;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: white;
+    transform: scale(1.1); 
+}
+
+.navbar ul li a:hover::before {
+    width: 100%;
+    background-color: #999; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    background-color: white;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px; 
+}
+
+.search input[type="text"] {
+    margin: 0 0.5rem;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: white;
+}
+
+#icons {
+    margin: 10px;
+    font-size: 15px;
+}
+
+.home video {
+    aspect-ratio: 2160/720;
+    object-fit: cover;
+    width: 100%;
+}
+
+.topic h1 {
+    text-align: center;
+    line-height: 7;
+    font-size: 35px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 600;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 500px;
+}
+
+.grid-container {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 500px);
+    width: 100% ;
+
+}
+
+.text-1 {
+    /* grid-area: 1 / 1 / span 1 / span 3; */
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    place-content: center;
+    margin-left: 5rem;
+}
+
+.text-1 p,
+.text-2 p,
+.text-3 p,
+.text-4 p {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 20px;
+}
+
+.text-1 h1,
+.text-2 h1,
+.text-3 h1,
+.text-4 h1 {
+    line-height: 3;
+    font-family: "Nanum Myeongjo", serif;
+    ;
+    font-size: 25px;
+}
+
+.dress {
+    /* grid-area: 1 / 5 / span 1 / span3; */
+    grid-column: 5/9;
+    grid-row: 1/2;
+}
+
+.text-2 {
+    /* grid-column-start: 5;
+    grid-row-start: 2;
+    grid-column-end: 9;
+    grid-row-end: 3; */
+    grid-column: 5/9;
+    grid-row: 2/3;
+    text-align: center;
+    place-content: center;
+    margin-right: 5rem;
+}
+
+.jewelry {
+    /* grid-area: 2 / 1 / span 1 / span 3; */
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.text-3 {
+    /* grid-area: 3/1/span 1/span 3; */
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-align: center;
+    place-content: center;
+    margin-left: 5rem;
+}
+
+.gift {
+    /* grid-area: 3 / 5 / span 1 / span 3; */
+    grid-column: 5/9;
+    grid-row: 3/4;
+}
+
+
+.Skincare {
+    /* grid-area: 4/1/span 1/span 3; */
+    grid-column: 1/4;
+    grid-row: 4/5;
+}
+
+
+.text-4 {
+    /* grid-area: 4/5/span 1/span 3; */
+    grid-column: 5/9;
+    grid-row: 4/5;
+    text-align: center;
+    place-content: center;
+    margin-right: 5rem;
+}
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px;
+    font-family: 'Arial, sans-serif';
+    color: #333;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-social a {
+    font-size: 20px;
+    color: #333;
+     padding: 20px;
+    text-decoration: none;
+}
+
+.footer-subscribe form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-subscribe input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    flex: 1;
+}
+
+.footer-subscribe button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.icon {
+    display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+}
+
+
+
+.grid-container img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.grid-container img:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+

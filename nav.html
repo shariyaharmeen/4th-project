@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="media.css">
+</head>
+<style>
+     .ham-icon {
+     display: none;
+     border: none;
+     background-color: transparent;
+ }
+
+ .ham-icon input[type="checkbox"] {
+     appearance: none;
+ }
+ .navbar ul {
+ 
+ display:block;
+}
+ @media only screen and (min-width: 300px) and (max-width: 550px) {
+    .ham-icon {
+    display: block;
+    order: 2;
+}
+.navbar ul {
+ 
+    display:none;
+}
+i.fa-solid.fa-x {
+    display: none;
+}
+
+.fa-x,
+.fa-bars {
+    color: black;
+    font-size: 1.7rem;
+}
+
+.navbar:has(input[type="checkbox"]:checked) .navbar-links {
+    margin-top: 1rem;
+    height: 270px;
+}
+
+.navbar:has(input[type="checkbox"]:checked) .fa-bars {
+    display: none;
+}
+
+.navbar:has(input[type="checkbox"]:checked) .fa-x {
+    display: inline-block;
+}
+
+.navbar-links i {
+    display: none;
+}
+
+ }
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo_dior.png" alt="">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">home</a>
+                    <a href="outfit.html">outfit</a>
+                    <a href="jewlery.html">jewelary</a>
+                    <a href="">Gift</a>
+                    <a href="">Skincare</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+        <div class="search">
+            <div id="icons" class="fa fa-search"></div>
+            <input type="text" placeholder="search..." name="search">
+            <div id="icons" class='bx bx-microphone'></div>
+        </div>
+        <button class="ham-icon">
+            <label for="ham-label">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-x"></i>
+            </label>
+            <input type="checkbox" id="ham-label" />
+        </button>
+    </nav>
+   
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+   <link rel="stylesheet" href="media.css">
+    <title>OUTFIT</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .dress-container h1 {
+        text-align: center;
+        line-height: 3;
+        font-size: 3rem;
+        font-family: "Nanum Myeongjo", serif;
+    }
+
+    .dress-container p {
+        width: 45%;
+        margin: auto;
+        font-size: 23px;
+        text-align: center;
+        font-family: "Lobster Two", sans-serif;
+    }
+
+    .outfit img {
+        height: 500px;
+        width: 100%;
+        object-fit: fill;
+    }
+
+    .outfit {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 500px);
+        grid-gap: 10px;
+        padding: 10px;
+        margin-top: 5rem;
+    }
+
+    .producthover {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .producthover img {
+        object-fit: fill;
+        transition: all 1.5s;
+    }
+
+    .producthover:hover img {
+        transform: scale(1.2);
+    }
+
+    .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 450px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        opacity: 0;
+    }
+
+    .producthover:hover .caption {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+
+    .img3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 450px);
+        object-fit: fill;
+        grid-gap: 10px;
+        padding: 10px;
+
+    }
+
+    .producthover img {
+        width: 100%;
+        height: 450px;
+    }
+
+    .hidden {
+        margin-top: 20px;
+    }
+
+    .menoutfit-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        transition: 0.3s ease-in;
+    }
+
+    .menoutfit-container img:hover {
+        border-radius: 50%;
+    }
+
+    .menoutfit-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        object-fit: fill;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .row1 h1 {
+        font-size: 25px;
+        font-family: "Nanum Myeongjo", serif;
+    }
+
+    .row1 {
+        grid-column: 6 / 9;
+        grid-row: 1 / 1;
+        margin: auto;
+        place-content: center;
+
+    }
+
+    figure.men4 {
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
+    }
+
+    figure.men1 {
+        grid-column: 4 / 7;
+        grid-row: 2 / 4;
+    }
+
+    figure.men2 {
+        grid-column: 7 / 10;
+        grid-row: 2 / 4;
+    }
+
+    figure.men3 {
+        grid-column: 10 / 13;
+        grid-row: 2 / 4;
+    }
+
+    figure.men6 {
+        grid-column: 1 / 4;
+        grid-row: 4 / 6;
+    }
+
+    figure.men5 {
+        grid-column: 4 / 7;
+        grid-row: 4 / 6;
+    }
+
+    figure.men7 {
+
+        grid-column: 7 / 10;
+        grid-row: 4 / 6;
+    }
+
+    figure.men8 {
+        grid-column: 10 / 13;
+        grid-row: 4 / 6;
+    }
+
+    .babyoutfit-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: 10px;
+        padding: 10px;
+
+    }
+
+    .babyoutfit-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border-radius: 25px;
+        transition: 0.3s ease-in;
+
+    }
+
+    .babyoutfit-container img:hover {
+        border-radius: 50%;
+    }
+
+    .row2 h1 {
+        font-size: 25px;
+        font-family: "Nanum Myeongjo", serif;
+    }
+
+    .row2 {
+        grid-column: 6 / 9;
+        grid-row: 1 / 1;
+        margin: auto;
+        place-content: center;
+
+    }
+
+    figure.baby1 {
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
+    }
+
+    figure.baby2 {
+        grid-column: 4 / 7;
+        grid-row: 2 / 4;
+    }
+
+    figure.baby3 {
+        grid-column: 7 / 10;
+        grid-row: 2 / 4;
+    }
+
+    figure.baby4 {
+        grid-column: 10 / 13;
+        grid-row: 2 / 4;
+    }
+
+    figure.baby5 {
+        grid-column: 1 / 4;
+        grid-row: 4 / 6;
+    }
+
+    figure.baby6 {
+        grid-column: 4 / 7;
+        grid-row: 4 / 6;
+    }
+
+    figure.baby7 {
+
+        grid-column: 7 / 10;
+        grid-row: 4 / 6;
+    }
+
+    figure.baby8 {
+        grid-column: 10 / 13;
+        grid-row: 4 / 6;
+    }
+
+    .womenoutfit-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-gap: 10px;
+        padding-bottom: 10px;
+        padding: 10px;
+
+    }
+
+    .womenoutfit-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border-radius: 25px;
+
+    }
+    .womenoutfit-container img:hover{
+        border-radius: 50%;
+    }
+   
+
+    .row3 h1 {
+        font-size: 25px;
+        font-family: "Nanum Myeongjo", serif;
+    }
+
+    .row3 {
+        grid-column: 6 / 9;
+        grid-row: 1 / 1;
+        margin: auto;
+        place-content: center;
+    }
+
+    .images {
+        position: relative;
+    }
+
+    .images #inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s ease-in;
+    }
+
+    .images #inner:hover {
+        opacity: 1;
+        border-radius: 50%;
+    }
+
+    .women1 {
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
+    }
+
+    .women2 {
+        grid-column: 4 / 7;
+        grid-row: 2 / 4;
+    }
+
+    .women3 {
+        grid-column: 7 / 10;
+        grid-row: 2 / 4;
+    }
+
+    .women4 {
+        grid-column: 10 / 13;
+        grid-row: 2 / 4;
+    }
+
+    .women5 {
+        grid-column: 1 / 4;
+        grid-row: 4 / 6;
+    }
+
+    .women6 {
+        grid-column: 4 / 7;
+        grid-row: 4 / 6;
+    }
+
+    .women7 {
+
+        grid-column: 7 / 10;
+        grid-row: 4 / 6;
+    }
+
+    .women8 {
+        grid-column: 10 / 13;
+        grid-row: 4 / 6;
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo_dior.png" alt="">
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">home</a>
+                    <a href="outfit.html">outfit</a>
+                    <a href="jewlery.html">jewelary</a>
+                    <a href="">Gift</a>
+                    <a href="">Skincare</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+        <div class="search">
+            <div id="icons" class="fa fa-search"></div>
+            <input type="text" placeholder="search..." name="search">
+            <div id="icons" class='bx bx-microphone'></div>
+        </div>
+    </nav>
+    <section>
+        <div class="dress-container">
+            <h1>OUTFIT</h1>
+            <p>“Outfit are everything to me,” confided Christian Dior in his memoirs. Remaining faithful to the couture
+                spirit of Dior, these women’s wardrobe essentials celebrate the passion and dedication of the couturier.
+            </p>
+        </div>
+    </section>
+    <section class="hidden">
+        <div class="three">
+            <div class="img3">
+                <div class="producthover">
+                    <img src="/images/jimin.jpg" alt="" class="men-outfit">
+                    <div class="caption">
+                        <h2>MEN</h2>
+                    </div>
+
+                </div>
+                <div class="producthover">
+                    <img src="/images/baby-outfit.jpg" alt="" class="baby-outfit">
+                    <div class="caption">
+                        <h2>kid</h2>
+                    </div>
+                </div>
+                <div class="producthover">
+                    <img src="/images/jennie-dress.jpg" alt="" class="woman-outfit">
+                    <div class="caption">
+                        <h2>WOMEN</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="menoutfit-container">
+        <div class="row1">
+            <h1>MENS OUTFITS</h1>
+        </div>
+        <figure class="men1">
+            <img src="/images/v.jpg" alt="">
+        </figure>
+        <figure class="men2">
+            <img src="/images/jk.jpg" alt="">
+        </figure>
+        <figure class="men3">
+            <img src="/images/suga.jpg" alt="">
+        </figure>
+        <figure class="men4">
+            <img src="/images/minhope.jpg" alt="">
+        </figure>
+        <figure class="men5">
+            <img src="/images/jung.jpg" alt="">
+        </figure>
+        <figure class="men6">
+            <img src="/images/rm2.jpg" alt="">
+        </figure>
+        <figure class="men7">
+            <img src="/images/jin.jpg" alt="">
+        </figure>
+        <figure class="men8">
+            <img src="/images/bts1.jpg" alt="">
+        </figure>
+    </section>
+    <section class="babyoutfit-container">
+        <div class="row2">
+            <h1>KIDS OUTFIT</h1>
+        </div>
+        <figure class="baby1">
+            <img src="/images/baby1.jpg" alt="">
+        </figure>
+        <figure class="baby2">
+            <img src="/images/baby 2.jpg" alt="">
+        </figure>
+        <figure class="baby3">
+            <img src="/images/baby3.jpg" alt="">
+        </figure>
+        <figure class="baby4">
+            <img src="/images/baby4-L.jpg" alt="">
+        </figure>
+        <figure class="baby5">
+            <img src="/images/baby5-L-Photoroom.png" alt="">
+        </figure>
+        <figure class="baby6">
+            <img src="/images/baby6-Photoroom.png" alt="">
+        </figure>
+        <figure class="baby7">
+            <img src="/images/baby7-Photoroom.png" alt="">
+        </figure>
+        <figure class="baby8">
+            <img src="/images/baby8.jpg" alt="">
+        </figure>
+    </section>
+
+    <section class="womenoutfit-container">
+        <div class="row3">
+            <h1>WOMENS OUTFIT</h1>
+        </div>
+        <div class="women1">
+            <div class="images">
+                <img id="outer" src="/images/dior1-a.jpg" alt="">
+                <img id="inner" src="/images/dior1-b.jpg" alt="">
+            </div>
+        </div>
+        <div class="women2">
+            <div class="images">
+                <img id="outer" src="/images/dior2-a.jpg" alt="">
+                <img id="inner" src="/images/dior2-b.jpg" alt="">
+            </div>
+        </div>
+        <div class="women3">
+            <div class="images">
+                <img id="outer" src="/images/dior3-a.jpg" alt="">
+                <img id="inner" src="/images/dior3-b.jpg" alt="">
+            </div>
+        </div>
+        <div class="women4">
+            <div class="images">
+                <img id="outer" src="/images/dior4-a.jpg" alt="">
+                <img id="inner" src="/images/dior4-b.jpg" alt="">
+            </div>
+        </div>
+        <div class="women5">
+            <div class="images">
+                <img id="outer" src="/images/dior5-a.jpg" alt="">
+                <img id="inner" src="/images/dior5-b.jpg" alt="">
+            </div>
+        </div>
+        <div class="women6">
+            <div class="images">
+                <img id="outer" src="/images/dior6-a.jpg" alt="">
+                <img id="inner" src="/images/dior6-b.jpg" alt="">
+            </div>
+        </div>
+        <div class="women7">
+            <div class="images">
+                <img id="outer" src="/images/dior7-a.jpg" alt="">
+                <img id="inner" src="/images/dior7-b.jpg" alt="">
+            </div>
+        </div>
+        <div class="women8">
+            <div class="images">
+                <img id="outer" src="/images/dior8-a.jpg" alt="">
+                <img id="inner" src="/images/dior8-b.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="images/logo_dior.png" alt="Dior Logo">
+        </div>
+
+        <div class="footer-nav">
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Fragrances</a></li>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Bestsellers</a></li>
+                    <li><a href="#">Gift Ideas</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="icon">
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+
+                <div class="footer-subscribe">
+                    <form>
+                        <input type="email" placeholder="Enter your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="footer-copyright">
+            <p>© 2024 Dior. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

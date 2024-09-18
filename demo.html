@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header {
+     background-color: rgb(216, 109, 127);
+     
+ }
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+     padding: 10px;
+     color: white;
+
+ }
+ .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+    .ham-icon {
+     display: none;
+     border: none;
+     background-color: transparent;
+ }
+
+ .ham-icon input[type="checkbox"] {
+     appearance: none;
+ }
+
+ .navbar-links {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     gap: 40px;
+     font-size: 18px;
+ }
+
+ .navbar-links li {
+     display: flex;
+     align-items: center;
+ }
+
+ .navbar-links a {
+     color: #fff;
+ }
+ @media only screen and (min-width: 300px) and (max-width: 550px) {
+
+
+.navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0 10px 10px;
+    justify-content: space-between;
+
+
+}
+
+.navbar-center {
+    order: 1;
+}
+
+.navbar-links {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.ham-icon {
+    display: block;
+    order: 2;
+}
+
+i.fa-solid.fa-x {
+    display: none;
+}
+
+.fa-x,
+.fa-bars {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.navbar:has(input[type="checkbox"]:checked) .navbar-links {
+    margin-top: 1rem;
+    height: 270px;
+}
+
+.navbar:has(input[type="checkbox"]:checked) .fa-bars {
+    display: none;
+}
+
+.navbar:has(input[type="checkbox"]:checked) .fa-x {
+    display: inline-block;
+}
+
+.navbar-links i {
+    display: none;
+}
+ }
+</style>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo_dior.png" alt="">
+
+            <!-- <img src="log.png" alt=""> -->
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallary</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <div class="icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        </ul>
+        <button class="ham-icon">
+            <label for="ham-label">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-x"></i>
+            </label>
+            <input type="checkbox" id="ham-label" />
+        </button>
+
+    </nav>
+ 
+
+    </header>
+</body>
+</html>
