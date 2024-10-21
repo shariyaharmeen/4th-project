@@ -1,4 +1,4 @@
-@media  (min-width: 350px) and   (max-width: 550px) {
+@media only screen and (min-width: 350px) and (max-width: 550px)  {
 
     .navbar {
         display: flex;
@@ -103,41 +103,41 @@
         order: 8;
     }
     .dress-container p {
-        width: 80%;
-        font-size: 17px;
+        width: 95%!important;
+        font-size: 17px!important;
     }
 
     .dress-container h1 {
         line-height: 2;
-        font-size: 20px;
+        font-size: 2rem!important;
     }
     .row1 h1 {
-        font-size: 10px;
+        font-size: 10px!important;
     }
 
     .row2 h1 {
-        font-size: 12px;
+        font-size: 12px!important;
     }
 
     .row3 h1 {
-        font-size: 9px;
+        font-size: 9px!important;
     }
    
-      .img3 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 230px);
+    .img3 {
+        display: grid!important;
+        grid-template-columns: repeat(3, 1fr)!important;
+        grid-template-rows: repeat(1, 230px)!important;
+        object-fit: fill;
+        grid-gap: 10px;
+        padding: 10px;
     }
 
     .producthover img {
         width: 100%;
-        height: 230px;
+        height: 230px!important;
     }
-    /* .producthover{
-        height: 230px;
-    } */
     .caption {
-        height: 230px;
+        height: 230px!important;
     }
     
     .footer-logo img {
